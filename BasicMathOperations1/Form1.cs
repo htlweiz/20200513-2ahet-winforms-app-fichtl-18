@@ -151,5 +151,54 @@ namespace BasicMathOperations1
                 txtNumber1.SelectAll();
             }
         }
+
+        private void btnhoch_Click(object sender, EventArgs e)
+        {
+            double number1, number2, result;
+
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+                result = Math.Pow(number1,number2);
+                lblResult.Text = Convert.ToString(result);
+                lblResultType.Text = "Potenz";
+            }
+            catch (Exception ex)
+            {
+                lblResultType.Text = "Fehler";
+                lblResult.Text = "Kein numerischer Wert!";
+
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+        }
+
+        private void btnwurzel_Click(object sender, EventArgs e)
+        {
+            double number1, number2, result;
+
+            try
+            {
+                number1 = Convert.ToInt32(txtNumber1.Text);
+                number2 = Convert.ToInt32(txtNumber2.Text);
+                number2 = 1 / number2;
+                result = Math.Pow(number1, number2);
+                lblResult.Text = Convert.ToString(result);
+                lblResultType.Text = "Wurzel";
+            }
+            catch (Exception ex)
+            {
+                lblResultType.Text = "Fehler";
+                lblResult.Text = "Kein numerischer Wert!";
+
+                MessageBox.Show(ex.Message, "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                txtNumber1.Focus();
+                txtNumber1.SelectAll();
+            }
+        }
     }
 }

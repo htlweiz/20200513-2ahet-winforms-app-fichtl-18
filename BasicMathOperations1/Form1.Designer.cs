@@ -40,6 +40,8 @@
 			this.btnminus = new System.Windows.Forms.Button();
 			this.btnmal = new System.Windows.Forms.Button();
 			this.btndividiert = new System.Windows.Forms.Button();
+			this.btnhoch = new System.Windows.Forms.Button();
+			this.btnwurzel = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// lblTitle
@@ -48,7 +50,7 @@
 			this.lblTitle.Location = new System.Drawing.Point(77, 14);
 			this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.lblTitle.Name = "lblTitle";
-			this.lblTitle.Size = new System.Drawing.Size(383, 51);
+			this.lblTitle.Size = new System.Drawing.Size(414, 51);
 			this.lblTitle.TabIndex = 0;
 			this.lblTitle.Text = "Einfache Rechenoperationen";
 			this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -87,7 +89,7 @@
 			// 
 			this.txtNumber1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtNumber1.Location = new System.Drawing.Point(127, 90);
-			this.txtNumber1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtNumber1.Margin = new System.Windows.Forms.Padding(2);
 			this.txtNumber1.Name = "txtNumber1";
 			this.txtNumber1.Size = new System.Drawing.Size(151, 26);
 			this.txtNumber1.TabIndex = 4;
@@ -99,7 +101,7 @@
 			// 
 			this.txtNumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtNumber2.Location = new System.Drawing.Point(127, 128);
-			this.txtNumber2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txtNumber2.Margin = new System.Windows.Forms.Padding(2);
 			this.txtNumber2.Name = "txtNumber2";
 			this.txtNumber2.Size = new System.Drawing.Size(151, 26);
 			this.txtNumber2.TabIndex = 5;
@@ -121,8 +123,8 @@
 			// btnAdd
 			// 
 			this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAdd.Location = new System.Drawing.Point(312, 92);
-			this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnAdd.Location = new System.Drawing.Point(298, 92);
+			this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
 			this.btnAdd.Name = "btnAdd";
 			this.btnAdd.Size = new System.Drawing.Size(44, 40);
 			this.btnAdd.TabIndex = 7;
@@ -134,7 +136,7 @@
 			// 
 			this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnClear.Location = new System.Drawing.Point(219, 212);
-			this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnClear.Margin = new System.Windows.Forms.Padding(2);
 			this.btnClear.Name = "btnClear";
 			this.btnClear.Size = new System.Drawing.Size(56, 38);
 			this.btnClear.TabIndex = 8;
@@ -145,7 +147,7 @@
 			// btnminus
 			// 
 			this.btnminus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnminus.Location = new System.Drawing.Point(312, 156);
+			this.btnminus.Location = new System.Drawing.Point(298, 156);
 			this.btnminus.Margin = new System.Windows.Forms.Padding(2);
 			this.btnminus.Name = "btnminus";
 			this.btnminus.Size = new System.Drawing.Size(44, 40);
@@ -157,7 +159,7 @@
 			// btnmal
 			// 
 			this.btnmal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnmal.Location = new System.Drawing.Point(386, 92);
+			this.btnmal.Location = new System.Drawing.Point(362, 92);
 			this.btnmal.Margin = new System.Windows.Forms.Padding(2);
 			this.btnmal.Name = "btnmal";
 			this.btnmal.Size = new System.Drawing.Size(44, 40);
@@ -169,7 +171,7 @@
 			// btndividiert
 			// 
 			this.btndividiert.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btndividiert.Location = new System.Drawing.Point(386, 155);
+			this.btndividiert.Location = new System.Drawing.Point(362, 156);
 			this.btndividiert.Margin = new System.Windows.Forms.Padding(2);
 			this.btndividiert.Name = "btndividiert";
 			this.btndividiert.Size = new System.Drawing.Size(44, 40);
@@ -178,12 +180,38 @@
 			this.btndividiert.UseVisualStyleBackColor = true;
 			this.btndividiert.Click += new System.EventHandler(this.button1_Click_1);
 			// 
+			// btnhoch
+			// 
+			this.btnhoch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnhoch.Location = new System.Drawing.Point(427, 92);
+			this.btnhoch.Margin = new System.Windows.Forms.Padding(2);
+			this.btnhoch.Name = "btnhoch";
+			this.btnhoch.Size = new System.Drawing.Size(95, 40);
+			this.btnhoch.TabIndex = 12;
+			this.btnhoch.Text = "a^b";
+			this.btnhoch.UseVisualStyleBackColor = true;
+			this.btnhoch.Click += new System.EventHandler(this.btnhoch_Click);
+			// 
+			// btnwurzel
+			// 
+			this.btnwurzel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnwurzel.Location = new System.Drawing.Point(427, 155);
+			this.btnwurzel.Margin = new System.Windows.Forms.Padding(2);
+			this.btnwurzel.Name = "btnwurzel";
+			this.btnwurzel.Size = new System.Drawing.Size(95, 40);
+			this.btnwurzel.TabIndex = 13;
+			this.btnwurzel.Text = "a^1/b";
+			this.btnwurzel.UseVisualStyleBackColor = true;
+			this.btnwurzel.Click += new System.EventHandler(this.btnwurzel_Click);
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.LightGray;
 			this.ClientSize = new System.Drawing.Size(533, 292);
+			this.Controls.Add(this.btnwurzel);
+			this.Controls.Add(this.btnhoch);
 			this.Controls.Add(this.btndividiert);
 			this.Controls.Add(this.btnmal);
 			this.Controls.Add(this.btnminus);
@@ -196,7 +224,7 @@
 			this.Controls.Add(this.lblNumber2);
 			this.Controls.Add(this.lblNumber1);
 			this.Controls.Add(this.lblTitle);
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "Form1";
 			this.Text = "Form1";
 			this.Load += new System.EventHandler(this.Form1_Load);
@@ -219,6 +247,8 @@
 		private System.Windows.Forms.Button btnminus;
 		private System.Windows.Forms.Button btnmal;
 		private System.Windows.Forms.Button btndividiert;
+		private System.Windows.Forms.Button btnhoch;
+		private System.Windows.Forms.Button btnwurzel;
 	}
 }
 
