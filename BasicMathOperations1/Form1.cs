@@ -133,12 +133,18 @@ namespace BasicMathOperations1
             int number1, number2, result;
 
             try
-            {
-                number1 = Convert.ToInt32(txtNumber1.Text);
+            {   number1 = Convert.ToInt32(txtNumber1.Text);
                 number2 = Convert.ToInt32(txtNumber2.Text);
+                if (number2 == 0)
+                {
+                    MessageBox.Show("Division durch null", "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);                
+                }
+                else
+                {               
                 result = number1 / number2;
                 lblResult.Text = Convert.ToString(result);
                 lblResultType.Text = "Quotient";
+                }                              
             }
             catch (Exception ex)
             {
@@ -157,12 +163,18 @@ namespace BasicMathOperations1
             double number1, number2, result;
 
             try
-            {
-                number1 = Convert.ToInt32(txtNumber1.Text);
+            {   number1 = Convert.ToInt32(txtNumber1.Text);
                 number2 = Convert.ToInt32(txtNumber2.Text);
-                result = Math.Pow(number1,number2);
-                lblResult.Text = Convert.ToString(result);
-                lblResultType.Text = "Potenz";
+                if((number1 == 0) && (number2 <= 0))
+                {
+                    MessageBox.Show("Ergebnis nicht definiert", "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);           
+                }
+                else
+                {
+                    result = Math.Pow(number1,number2);
+                    lblResult.Text = Convert.ToString(result);
+                    lblResultType.Text = "Potenz";
+                }
             }
             catch (Exception ex)
             {
@@ -184,10 +196,17 @@ namespace BasicMathOperations1
             {
                 number1 = Convert.ToInt32(txtNumber1.Text);
                 number2 = Convert.ToInt32(txtNumber2.Text);
+                if ((number1 < 0) || (number2 == 0))
+                {
+                    MessageBox.Show("Ergebnis nicht definiert", "Eingabefehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
                 number2 = 1 / number2;
                 result = Math.Pow(number1, number2);
                 lblResult.Text = Convert.ToString(result);
                 lblResultType.Text = "Wurzel";
+                }                             
             }
             catch (Exception ex)
             {
